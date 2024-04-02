@@ -31,7 +31,8 @@ view: users {
     sql: ${age} ;;  }
   measure: average_age {
     type: average
-    sql: ${age} ;;  }
+    sql: ${age} ;;
+    value_format: "0.0"}
 
   dimension: city {
     type: string
@@ -109,13 +110,13 @@ view: users {
   # ----- Sets of fields for drilling ------
   set: detail {
     fields: [
-	id,
-	last_name,
-	first_name,
-	events.count,
-	order_items.count,
-	orders.count
-	]
+  id,
+  last_name,
+  first_name,
+  events.count,
+  order_items.count,
+  orders.count
+  ]
   }
 
 }
